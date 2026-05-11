@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>停車 CPI 觀測站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>停車 CPI 觀測站</h1>
+    <p>記錄不同停車場的每小時價格，觀察日常停車費的變化。</p>
+
+    <div class="card">
+        <h2>新增停車費資料</h2>
+
+        <input type="date" id="date">
+        <input type="text" id="location" placeholder="停車場地點，例如：逢甲夜市停車場">
+        <input type="number" id="price" placeholder="每小時價格，例如：40">
+
+        <button onclick="addPrice()">新增資料</button>
+    </div>
+
+    <div class="card">
+        <h2>查詢停車費紀錄</h2>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="輸入地點關鍵字搜尋，例如：逢甲"
+            oninput="loadPrices()"
+        >
+
+        <table>
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>地點</th>
+                    <th>每小時價格</th>
+                </tr>
+            </thead>
+            <tbody id="priceList"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

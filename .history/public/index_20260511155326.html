@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>停車 CPI 觀測站</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>停車 CPI 觀測站</h1>
+
+    <div class="form">
+        <input type="date" id="date">
+
+        <input type="text" id="location" placeholder="停車場地點">
+
+        <input type="number" id="price" placeholder="價格">
+
+        <button onclick="addPrice()">新增資料</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>地點</th>
+                <th>價格</th>
+            </tr>
+        </thead>
+
+        <tbody id="priceList">
+
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
